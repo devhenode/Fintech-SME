@@ -85,7 +85,7 @@ const userProfile = async (req, res) => {
   try {
     const {id}=req.user
     const user = await User.findById(id).select("-password -__v");
-    res.status(200).status({ user });
+    res.status(200).json(user);
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
