@@ -25,6 +25,12 @@ const signUpUser = async (req, res) => {
       throw Error("Password not strong enough");
     }
 
+    //check if user already exists
+    const exists = await User.findOne({ email });
+    if (exists) {
+      throw Error("User already exists");
+    }
+
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
 
@@ -72,4 +78,17 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { signUpUser, loginUser };
+// user profile
+// method: GET
+
+const userProfile = async (req, res) => {
+  try {
+    const {id}=req.user
+    const user = await User.findById(id).select("-password -__v");
+    res.status(200).status({ user });
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+}
+
+module.exports = { signUpUser, loginUser, userProfile };
