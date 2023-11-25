@@ -91,4 +91,9 @@ const userProfile = async (req, res) => {
   }
 }
 
+// forgot password
+// method: POST -> send email with reset link/otp
+
+// const forgotPassword = async (req, res) => {
+
 module.exports = { signUpUser, loginUser, userProfile };
