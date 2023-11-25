@@ -39,6 +39,7 @@ const signUpUser = async (req, res) => {
       password: hash,
       email,
       phoneNumber,
+      accountNumber: phoneNumber
     });
 
     const id = user._id;
