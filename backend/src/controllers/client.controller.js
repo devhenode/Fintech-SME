@@ -62,8 +62,19 @@ const onboardClient = async (req, res) => {
 };
 
 const getClients = async (req, res) => {
+    const keySearch = req.query.keySearch;
     try {
-        const clients = await Client.find({}).select("-__v")
+        const clients = await Client.find({
+            $or: [
+                { organizationName: { $regex: keySearch, $options: "i" } },
+                { location: { $regex: keySearch, $options: "i" } },
+                { state: { $regex: keySearch, $options: "i" } },
+                { timeZone: { $regex: keySearch, $options: "i" } },
+                { currency: { $regex: keySearch, $options: "i" } },
+                { language: { $regex: keySearch, $options: "i" } },
+                { phoneNumber: { $regex: keySearch, $options: "i" } },
+            ],
+        }).select("-__v")
         .populate({
             path:"addedBy",
             select:"-password -__v -createdAt -updatedAt"
