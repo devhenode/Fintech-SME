@@ -63,7 +63,7 @@ const Login = () => {
   // testmail@test.com
 
   return (
-    <div className="bg-backgroundImage px-5 max-w-[40rem] m-auto mt-[5rem] gap-14 flex-col flex">
+    <div className="bg-backgroundImage px-5 max-w-[40rem] m-auto mt-[5rem] gap-8 flex-col flex">
       <h1 className="text-center font-bold text-[1.75rem]">LOGIN</h1>
 
       <form onSubmit={(e) => submitForm(e)} className="flex flex-col gap-5">
