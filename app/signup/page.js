@@ -128,13 +128,16 @@ const Signup = () => {
           <Button
             name={`${loading ? "Creating an account ..." : "Create Account"}`}
           />
-          <p className="text-xs text-right text-gray-500">
-            Already have an account?
-            <Link href="/login" className="text-[#3FC2A3]">
-              {" "}
-              Login
-            </Link>{" "}
-          </p>
+          <div className="flex justify-between text-xs">
+            <Link href="/forgotpassword" className="text-[#3FC2A3]">Forgot password?</Link>
+            <p className="text-gray-500 ">
+              Already have an account?
+              <Link href="/login" className="text-[#3FC2A3]">
+                {" "}
+                Login
+              </Link>{" "}
+            </p>
+          </div>
         </div>
       </form>
     </div>

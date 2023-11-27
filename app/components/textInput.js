@@ -5,7 +5,7 @@ const Input = (props) => {
       type={props.type}
       name={props.name}
       placeholder={props.placeholder}
-      className="border border-gray-300 p-2 text-sm rounded"
+      className="w-full p-2 text-sm border border-gray-300 rounded"
     />
   );
 };

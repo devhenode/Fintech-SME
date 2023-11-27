@@ -90,13 +90,16 @@ const Login = () => {
 
         <div className="flex flex-col gap-2">
           <Button name={loading ? "Logging In..." : "Log In"} />
-          <p className="text-xs text-right text-gray-500">
-            Don't have an account?
-            <Link href="/signup" className="text-[#3FC2A3]">
-              {" "}
-              Signup
-            </Link>{" "}
-          </p>
+          <div className="flex justify-between text-xs">
+            <Link href="/forgotpassword" className="text-[#3FC2A3]">Forgot password?</Link>
+            <p className="text-gray-500 ">
+              Don't have an account?
+              <Link href="/signup" className="text-[#3FC2A3]">
+                {" "}
+                Signup
+              </Link>{" "}
+            </p>
+          </div>
         </div>
       </form>
     </div>
