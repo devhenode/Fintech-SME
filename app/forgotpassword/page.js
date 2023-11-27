@@ -20,15 +20,9 @@ const ForgotPassword = () => {
             <form className="">
               <Input type="number" placeholder="Enter phone number" name="phoneNumber" />
             </form>
-            <button className="hover:bg-[#3FC2A3] text-center p-2 rounded w-full text-white bg-[#3FC2A3]">
-              <Link href="/resetpassword">Request</Link>
-            </button>
-          </div>
-          <div className="text-xs text-right">
-            <p className="text-gray-500">
-              Didn’t receive the code?
-              <a href="#" className="text-[#3FC2A3]">Resend</a>  
-            </p>
+            <Link href="/resetpassword" className="hover:bg-[#3FC2A3] text-center p-2 rounded w-full text-white bg-[#3FC2A3]">
+              Request
+            </Link>
           </div>
         </div>
     </div>
