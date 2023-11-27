@@ -1,5 +1,5 @@
 
-const onboard = [
+export const onboard = [
     {
         id: 1,
         image: "/vectors/images/Investments.png",

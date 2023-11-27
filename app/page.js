@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Onboard from './onboarding/page'
+import Onboard from './components/onboarding'
 
 export default function Home() {
   return (
