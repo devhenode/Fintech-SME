@@ -20,7 +20,7 @@ const Stepper = () => {
               <span className={`p-2 rounded-full ${active? "bg-[#3FC2A3]":"bg-[#E0F4F3]"}`}></span>
              ))}
         </div>
-        <button className="" onClick={handleActive}>{active? "Next": "Get Started"}</button>
+        <button className="" onClick={handleActive}>{Array === 3? "Get Started": "Next"}</button>
     </div>
   )
 }
