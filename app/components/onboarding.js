@@ -15,7 +15,7 @@ const Onboard = () => {
   };
   
   return (
-    <div className="">
+    <div className="w-auto max-w-[40rem]">
       <div className="flex justify-end mt-8 mr-5">
         <Link href="/login" className="bg-[#FFEEEC] text-center p-1 px-3 rounded-xl text-[#FF553E] text-xs">Skip</Link>
       </div>

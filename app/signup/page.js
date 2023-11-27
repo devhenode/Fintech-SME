@@ -72,7 +72,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-backgroundImage px-5 max-w-[40rem] m-auto mt-[2rem] gap-5 flex-col flex">
+    <div className="bg-backgroundImage px-5 max-w-[40rem] m-auto mt-[2rem] flex-col flex">
       <h1 className="text-center font-bold text-[1.75rem]">Create Account</h1>
 
       <form onSubmit={(e) => submitForm(e)} className="flex flex-col gap-5">
