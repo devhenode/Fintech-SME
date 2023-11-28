@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+form {
+    margin: 20px 20px;
+    padding: 15px;
+    background-color: rgb(240, 238, 238);
+}
+
+input {
+    height: 50px;
+    width: 98%;
+    margin: 10px 8px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px black ;
+}
+
+input:active {
+    border-color: rgb(116, 240, 116);
+}
+
+button {
+    width: 90%;
+    margin: 10px 10px;
+    height: 60px;
+    background-color: rgb(75, 219, 183);
+    border-radius: 10px;
+}
